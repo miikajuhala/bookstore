@@ -17,7 +17,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class BookController {
 @Autowired
 private BookRepository repository;
+@Autowired
+private Gategoryrepository grepository;
 
+ 
 
 @RequestMapping("/index")
 public String index(Model model) {
@@ -32,13 +35,17 @@ model.addAttribute("books", repository.findAll());
 return "booklist"; 
 
 	} 
+
+
+
 @RequestMapping("/addbook")  
 public String addbook(Model model) {
 model.addAttribute("book", new Book());  
-	
+System.out.println("TAAAÖDAFDFADFDA ADFADF!433333333333333333333"+grepository.findAll());
+model.addAttribute("gategories",grepository.findAll());
 return "addbook";
- 
-	} 
+
+	}  
 @RequestMapping(value = "/save", method = RequestMethod.POST)
 public String save(Book book){
  repository.save(book); 

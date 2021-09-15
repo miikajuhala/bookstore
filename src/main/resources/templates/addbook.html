@@ -12,5 +12,12 @@
  <input type="text" th:field="*{Price}" />
  
  <input type="submit" value="Tallenna"></input>
+ 
+ <label for="gatelist">Gategory</label>
+<select  th:field="*{gategory}" class="form-control">
+ <option th:each="gategory: ${gategories}" th:value="${gategory.id}"
+ th:text="${gategory.name}"></option>
+</select>
+ 
  </form>
  </div>

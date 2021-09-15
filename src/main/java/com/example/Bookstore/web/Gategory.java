@@ -20,6 +20,15 @@ private List<Book> books;
 public Gategory() {
 	super();
 }
+public Gategory(Long id, String name) {
+	super();
+	this.id = id;
+	this.name = name;
+}
+public Gategory(Long id) {
+	super();
+	this.id = id;
+}
 public Gategory(String name) {
 	super();
 	this.name = name;

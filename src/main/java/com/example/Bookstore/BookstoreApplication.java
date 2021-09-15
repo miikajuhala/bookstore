@@ -28,20 +28,21 @@ public class BookstoreApplication {
           
 
 
-grepository.save(new Gategory("Holy Books"));
-grepository.save(new Gategory("History"));
+grepository.save(new Gategory("strats"));
+grepository.save(new Gategory("skins"));
 
         
-repository.save(new Book("Bible","many authors", 200,"131554ss", 2.0,
-grepository.findByName("Holy Books")));
+repository.save(new Book("smoke strat","aleksib", 200,"131554ss", 2.0,
+grepository.findByName("strats")));
 
-repository.save(new Book("Quran","many authors", 600,"131554ss", 2.0,
-grepository.findByName("Holy Books")));
+repository.save(new Book("aim strat","s1mple", 600,"131554ss", 2.0,
+grepository.findByName("strats")));
 
-repository.save(new Book("The history of christianity","D. MacCulloch", 2015,"1312554ss", 6.0,
-grepository.findByName("History")));
+repository.save(new Book("ggggggggg","koirakissa", 2015,"1312554ss", 6.0,
+grepository.findByName("skins")));
 
-System.out.println(grepository.findByName("History"));
+System.out.println(grepository.findByName("strats"));
+System.out.println("eka"+grepository.findAll());
    
         };
 

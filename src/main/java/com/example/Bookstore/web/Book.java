@@ -17,7 +17,7 @@ public class Book{
 @GeneratedValue(strategy = GenerationType.AUTO)
 private Long id;
 @ManyToOne
-private Gategory gategory;
+private Gategory gategory; 
 private String title;
 private String author;
 private int year;
