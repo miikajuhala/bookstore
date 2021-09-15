@@ -9,7 +9,9 @@ import org.springframework.context.annotation.Bean;
 
 import com.example.Bookstore.web.Book;
 import com.example.Bookstore.web.BookRepository;
-
+import com.example.Bookstore.web.Gategory;
+import com.example.Bookstore.web.Gategoryrepository;
+ 
 
 
 @SpringBootApplication
@@ -20,14 +22,30 @@ public class BookstoreApplication {
 	} 
 	
 	@Bean
-	public CommandLineRunner demo(BookRepository repository) {
-	return (args) -> {
-		repository.save(new Book("optimal cs strat","miika",2021,"ak47",50));
-		repository.save(new Book("smoke strat","miika",2021,"awp",50));
-		repository.save(new Book("ggggg","miika",2021,"ak47",50));
-		repository.save(new Book("ggggggggggg","miika",2021,"ak47",50));
-	};
-	}
-	
+    public CommandLineRunner studentDemo(BookRepository repository, Gategoryrepository grepository) {
+        return (args) -> {
+
+          
+
+
+grepository.save(new Gategory("Holy Books"));
+grepository.save(new Gategory("History"));
+
+        
+repository.save(new Book("Bible","many authors", 200,"131554ss", 2.0,
+grepository.findByName("Holy Books")));
+
+repository.save(new Book("Quran","many authors", 600,"131554ss", 2.0,
+grepository.findByName("Holy Books")));
+
+repository.save(new Book("The history of christianity","D. MacCulloch", 2015,"1312554ss", 6.0,
+grepository.findByName("History")));
+
+System.out.println(grepository.findByName("History"));
+   
+        };
+
+        }
+
 	}
 
