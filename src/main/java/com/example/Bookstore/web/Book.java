@@ -9,6 +9,8 @@ import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.ManyToAny;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 
 @Entity
@@ -16,6 +18,7 @@ public class Book{
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
 private Long id;
+@JsonIgnore
 @ManyToOne
 private Gategory gategory; 
 private String title;
