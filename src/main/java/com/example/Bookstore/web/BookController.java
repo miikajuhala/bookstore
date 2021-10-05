@@ -38,6 +38,10 @@ return "booklist";
 
 	} 
 
+@RequestMapping(value="/loginpage")
+public String login() {
+    return "loginpage";
+}
 
 
 @RequestMapping("/addbook")  
@@ -53,6 +57,11 @@ return "addbook";
 public @ResponseBody List<Book> bookListRest() {	
     return (List<Book>) repository.findAll();
 }    
+
+@RequestMapping(value="/booktitle/{title}", method = RequestMethod.GET)
+public @ResponseBody List<Book> findBookTitle(@PathVariable("title") String title) {	
+	return repository.findByTitle(title);
+}   
 
 @RequestMapping(value="/book/{id}", method = RequestMethod.GET)
 public @ResponseBody Optional<Book> findBookRest(@PathVariable("id") Long bookId) {	
