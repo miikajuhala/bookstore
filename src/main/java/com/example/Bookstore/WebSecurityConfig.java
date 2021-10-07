@@ -27,7 +27,7 @@ import com.example.Bookstore.web.UserDetailServiceImpl;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	 @Autowired
 	 private UserDetailServiceImpl userDetailsService;
-	
+	 
 	
     @Override
     protected void configure(HttpSecurity http) throws Exception {
