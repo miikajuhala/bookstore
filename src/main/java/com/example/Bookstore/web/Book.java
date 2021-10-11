@@ -112,9 +112,11 @@ public void setPrice(double price) {
 
 @Override
 public String toString() {
-	return "Book [title=" + title + ", author=" + author + ", year=" + year + ", isbn=" + isbn + ", price=" + price
-			+ "]";
+	return "Book [id=" + id + ", gategory=" + gategory + ", title=" + title + ", author=" + author + ", year=" + year
+			+ ", isbn=" + isbn + ", price=" + price + "]";
 }
+
+
 
 
 

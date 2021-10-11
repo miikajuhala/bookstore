@@ -39,5 +39,12 @@ public class RepoTest {
     	repository.save(book1);
     	assertThat(book1.getId()).isNotNull();
     }    
+    @Test
+    public void deleteBook() {
+    	Book book1 = new Book("onetaps11", "scream",2000, "fgg", 69, new Gategory("ff"));
+    	repository.delete(book1);
+    	assertThat(repository.findByTitle("onetaps11")).isEmpty();
+    }    
+  
 
 }

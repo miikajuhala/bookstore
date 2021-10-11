@@ -24,4 +24,3 @@ private BookController controller;
 	}
 
 }
-
