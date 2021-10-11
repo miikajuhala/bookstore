@@ -40,7 +40,7 @@ public Long getId() {
 }
 public Book() {}
 
-public Book( String title, String author, int year, String isbn, double price, Gategory gategory) {
+public Book(String title, String author, int year, String isbn, double price, Gategory gategory) {
 	super();
 	
 	this.gategory = gategory;
